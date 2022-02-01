@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionParser", "ExpressionParser\ExpressionParser.csproj", "{43DF3420-5DE9-4D61-B622-E891A68A5C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionParser.Tests", "ExpressionParser.Tests\ExpressionParser.Tests.csproj", "{8C36EA9C-6427-4E40-99F6-FF2E44EA15A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43DF3420-5DE9-4D61-B622-E891A68A5C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DF3420-5DE9-4D61-B622-E891A68A5C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DF3420-5DE9-4D61-B622-E891A68A5C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DF3420-5DE9-4D61-B622-E891A68A5C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C36EA9C-6427-4E40-99F6-FF2E44EA15A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C36EA9C-6427-4E40-99F6-FF2E44EA15A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C36EA9C-6427-4E40-99F6-FF2E44EA15A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C36EA9C-6427-4E40-99F6-FF2E44EA15A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B27AA0DA-89F8-49B1-AA96-0E38EA3F97D8}
+	EndGlobalSection
+EndGlobal
