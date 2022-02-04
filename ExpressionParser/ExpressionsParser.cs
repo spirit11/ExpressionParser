@@ -22,7 +22,7 @@ namespace ExpressionParser
             select first.First() + rest;
 
         private Parser<IExpression> Variable =>
-            from n in Name
+            from n in NameInCurveParentheses().Or(Name)
             select new Variable(n);
 
         private Parser<T> InParentheses<T>(Func<Parser<T>> innerParser) =>
@@ -30,6 +30,12 @@ namespace ExpressionParser
             from expr in innerParser()
             from rparen in Parse.Char(')')
             select expr;
+
+        private Parser<string> NameInCurveParentheses() =>
+            from lparen in Parse.Char('{')
+            from expr in Parse.Char(c => c != '}', "variable in parentheses").Many().Text()
+            from rparen in Parse.Char('}')
+            select expr.Trim();
 
         private readonly Parser<IExpression> constant =
             from decimalString in Parse.DecimalInvariant
