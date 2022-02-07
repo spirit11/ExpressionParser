@@ -33,7 +33,7 @@ namespace ExpressionParser
 
         private Parser<string> NameInCurveParentheses() =>
             from lparen in Parse.Char('{')
-            from expr in Parse.Char(c => c != '}', "variable in parentheses").Many().Text()
+            from expr in Parse.String("\\}").Return('}').XOr(Parse.Char(c => c != '}', "variable in parentheses")).Many().Text()
             from rparen in Parse.Char('}')
             select expr.Trim();
 
